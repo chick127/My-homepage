@@ -76,3 +76,14 @@ button:hover {
   background-color: yellow;
   color: red;
 }
+
+img {
+  vertical-align: bottom;
+  /*   vertical-align: top; */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
