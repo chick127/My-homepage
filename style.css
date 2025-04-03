@@ -73,8 +73,8 @@ button {
 }
 
 button:hover {
-  background-color: yellow;
-  color: red;
+  background-color: rgb(223, 186, 255);
+  color: rgb(30, 0, 255);
 }
 
 img {
