@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="style.css" />
 
     <style>
+      /* 기본 여백 제거 */
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
       nav a:hover {
         background-color: #140287;
       }
@@ -14,10 +22,27 @@
         opacity: 0.5;
       }
 
-    .img-fluid0px {
-      height: auto;
-    }
+      /* Navbar 고정 */
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #fff;
+      }
 
+      /* 이미지가 화면의 가로 세로 끝까지 덮도록 설정 */
+      .header-img {
+        width: 100%; /* 화면 가로 100% */
+        height: 100%; /* 화면 세로 100% */
+        object-fit: cover; /* 이미지 비율 유지하며 화면을 덮도록 */
+        object-position: center; /* 이미지 중앙에 배치 */
+      }
+
+      /* 이미지가 navbar 아래에 나오도록 마진 설정 */
+      .header {
+        margin-top: 60px; /* navbar 높이만큼 마진 추가 */
+      }
     </style>
 
     <!-- 메뉴 -->
@@ -34,38 +59,42 @@
     </nav>
   </head>
 
-  <div style="text-align: center;">
-
-  <div class="header">
-  <img src="밤4.png" class="header-img" alt="밤4.png">
-  <div class="animated-home">
-    <span class="letter" style="--i:0">H</span>
-    <span class="letter" style="--i:1">o</span>
-    <span class="letter" style="--i:2">m</span>
-    <span class="letter" style="--i:3">e</span>
-  </div>
-</div>
-
-  
-</div>
-
   <body>
+    <div style="text-align: center">
+      <div class="header">
+        <img src="밤4.png" class="header-img" alt="밤4.png" />
+        <div class="animated-home">
+          <span class="letter" style="--i: 0">H</span>
+          <span class="letter" style="--i: 1">o</span>
+          <span class="letter" style="--i: 2">m</span>
+          <span class="letter" style="--i: 3">e</span>
+        </div>
+      </div>
+    </div>
+
     <!-- 메인 섹션 -->
     <section class="main">
       <div class="container">
         <br />
         <h2>
-          <img src="중부대.png" height="50px">  
-          중부대학교 정보보호학과 허다현</a>
+          <img src="중부대.png" height="50px" />
+          중부대학교 정보보호학과 허다현
         </h2>
         <p><b>학번: 92410990</b></p>
 
         <h3>
-          <img src="github.png" height="35px">  <a href="https://github.com/chick127">Github</a>
+          <img src="github.png" height="35px" />
+          <a href="https://github.com/chick127">Github</a>
         </h3>
         <br />
 
-        <a href=https://github.com/chick127>
-          <img src="https://avatars.githubusercontent.com/u/162130142?s=96&v=4" height="250px">
+        <a href="https://github.com/chick127">
+          <img
+            src="https://avatars.githubusercontent.com/u/162130142?s=96&v=4"
+            height="250px"
+          />
+        </a>
+      </div>
+    </section>
   </body>
 </html>
