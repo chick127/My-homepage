@@ -98,7 +98,18 @@
   color: white !important;
 }
 
-
+@media (max-width: 768px) {
+  .outer {
+    grid-template-columns: 1fr; /* 한 줄로 만들기 */
+    gap: 40px; /* 너무 넓은 간격 줄이기 */
+  }
+}
+      @media (max-width: 450px) {
+        .flex-container {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
 </style>
 
     <!-- 메뉴 -->
