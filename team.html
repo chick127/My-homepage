@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹프로그래밍</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      nav a:hover {
+        background-color: #140287;
+      }
+      nav:has(a:hover) a:not(:hover) {
+        opacity: 0.5;
+      }
+      .card-title {
+        text-align: center;
+      }
+      .flex-container {
+        display: flex;
+        background-color: rgb(231, 231, 231);
+      }
+
+      .flex-container > div {
+        background-color: #ffffff;
+        margin: 15px;
+        padding: 20px;
+        font-size: 30px;
+        border: 1px solid #000;
+        border-radius: 10px;
+        border-width: 2px;
+        text-align: center;
+        border-color: black;
+        box-shadow: 1px 1px 6px 3px #140287;
+      }
+
+      /* 기본 상태 */
+      .btn-outline-dark {
+        background-color: white !important;
+        border-color: black !important;
+      }
+
+      .btn-link {
+        color: black !important; /* 기본 글씨 색상 */
+        text-decoration: none !important;
+      }
+
+      /* 호버 상태 */
+      .btn-outline-dark:hover {
+        background-color: black !important;
+      }
+      .btn-outline-dark:hover .btn-link {
+        color: white !important;
+      }
+
+      /* 클릭 상태 (:active) */
+      .btn-outline-dark:active {
+        background-color: black !important;
+      }
+      .btn-outline-dark:active .btn-link {
+        color: white !important;
+      }
+
+      /* 아이템 애니메이션 */
+      .flex-item {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: riseUp 0.7s forwards;
+        animation-delay: calc(var(--i) * 0.3s); /* --i 변수 필요 */
+      }
+
+      /* 키프레임 수정 */
+      @keyframes riseUp {
+        0% {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .flex-box {
+        background-color: rgb(231, 231, 231);
+        margin: 10px;
+        padding: 10px;
+        font-size: 40px;
+        text-align: center;
+        margin-left: 120px;
+      }
+      .text {
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 메뉴 -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">My homepage</div>
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="project.html">Project</a></li>
+          <li><a href="secon.html">SECON</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <br />
+      <h1>Team</h1>
+      <br />
+    </div>
+
+    <!-- 메인 섹션 -->
+    <section class="main">
+      <div class="container">
+        <div class="flex-container">
+          <div class="flex-item" style="width: 15rem; --i: 1">
+            <img
+              src="https://avatars.githubusercontent.com/u/202569496?v=4"
+              class="card-img-top"
+              alt=""
+              width="200px"
+            />
+            <div class="card-body1">
+              <h5 class="card">92410756 박민영</h5>
+              <button type="button" class="btn btn-outline-dark">
+                <a
+                  href="https://github.com/minyeong0125"
+                  class="btn btn-primary"
+                  >이동하기</a
+                >
+              </button>
+            </div>
+          </div>
+
+          <div class="flex-item" style="width: 15rem; --i: 2">
+            <img
+              src="https://avatars.githubusercontent.com/u/202569361?v=4"
+              class="card-img-top"
+              alt=""
+              width="200px"
+            />
+            <div class="card-body2">
+              <h5 class="card">92410794 송미강</h5>
+              <button type="button" class="btn btn-outline-dark">
+                <a href="https://github.com/Junbyung2" class="btn btn-primary"
+                  >이동하기</a
+                >
+              </button>
+            </div>
+          </div>
+
+          <div class="flex-item" style="width: 15rem; --i: 3">
+            <img
+              src="https://avatars.githubusercontent.com/u/202242390?v=4"
+              class="card-img-top"
+              alt=""
+              width="200px"
+            />
+            <div class="card-body3">
+              <h5 class="card">92410823 원종은</h5>
+              <button type="button" class="btn btn-outline-dark">
+                <a href="https://github.com/euniii0224" class="btn btn-primary"
+                  >이동하기</a
+                >
+              </button>
+            </div>
+          </div>
+
+          <div class="flex-item" style="width: 15rem; --i: 4">
+            <img
+              src="https://avatars.githubusercontent.com/u/202569531?v=4"
+              class="card-img-top"
+              alt=""
+              width="200px"
+            />
+            <div class="card-body4">
+              <h5 class="card">92415548 이성혜</h5>
+              <button type="button" class="btn btn-outline-dark">
+                <a href="https://github.com/SuNghYe414" class="btn btn-primary"
+                  >이동하기</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="flex-box">미정</div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

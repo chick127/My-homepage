@@ -1,10 +1,28 @@
-function showsniffing() {
-  document.getElementById('fig').src = 'sniffing.png'
-  document.getElementById('desc').innerHTML =
-    '정보보호(Information Security)란 정보의 수집, 가공, 저장, 검색, 송신, 수신 중에 정보의 훼손, 변조, 유출 등을 방지하기 위한 관리적·기술적 수단 또는 그러한 수단으로 이루어지는 행위를 말한다. 정보보호학전공에서는 체계적인 교육과정, 완벽한 실험실습교육 기반을 갖추고, 이론과 실무를 겸비한 정보보호 분야의 전문가를 양성한다.'
-}
+// 클릭 시 글씨 색상 변경
+document.querySelector('.btn').addEventListener('mousedown', function () {
+  this.querySelector('a').style.color = 'white'
+})
+document.querySelector('.btn').addEventListener('mouseup', function () {
+  this.querySelector('a').style.color = 'black'
+})
 
-function hide() {
-  document.getElementById('fig').src = ''
-  document.getElementById('desc').innerHTML = ''
-}
+const tooltip = document.getElementById('tooltip')
+const items = document.querySelectorAll('.prod-list li')
+
+items.forEach((item) => {
+  item.addEventListener('mouseenter', function () {
+    const title = item.getAttribute('data-title')
+    const detail = item.getAttribute('data-detail')
+
+    tooltip.innerHTML = `<h3>${title}</h3><p>${detail}</p>`
+    tooltip.style.display = 'block'
+
+    const rect = item.getBoundingClientRect()
+    tooltip.style.top = `${rect.top + window.scrollY}px`
+    tooltip.style.left = `${rect.right + 10}px`
+  })
+
+  item.addEventListener('mouseleave', function () {
+    tooltip.style.display = 'none'
+  })
+})
